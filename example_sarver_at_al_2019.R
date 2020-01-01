@@ -20,9 +20,18 @@ dir.create(example_folder, showWarnings = FALSE, recursive = TRUE)
 setwd(example_folder)
 set.seed(rng_seed)
 testit::assert(is_beast2_installed())
-phylogeny  <- ape::read.tree(
-  text = "(((A:8, B:8):1, C:9):1, ((D:8, E:8):1, F:9):1);"
-)
+
+# Same as https://github.com/bricesarver/prior_simulation_study/blob/master/simulate_trees.R#L26
+phylogeny  <- TreeSim::sim.bd.taxa.age(
+  n = 25,
+  numbsim = 1,
+  age = 5,
+  lambda = 0.5051457,
+  mu = 0,
+  frac = 1.0,
+  mrca = FALSE
+)[[1]]
+
 ape::write.tree(phylogeny, file = "tree_true.fas")
 
 alignment_params <- create_alignment_params(

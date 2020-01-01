@@ -8,3 +8,22 @@ Branch   |[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)         
 A [pirouette example](https://github.com/richelbilderbeek/pirouette_examples).
 to partially reproduce the setup by Sarver et al., 2019.
 
+## Links
+
+ * [Sarver at al., 2019 article](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6421065/)
+
+```
+@article{sarver2019choice,
+  title={The choice of tree prior and molecular clock does not substantially affect phylogenetic inferences of diversification rates},
+  author={Sarver, Brice AJ and Pennell, Matthew W and Brown, Joseph W and Keeble, Sara and Hardwick, Kayla M and Sullivan, Jack and Harmon, Luke J},
+  journal={PeerJ},
+  volume={7},
+  pages={e6334},
+  year={2019},
+  publisher={PeerJ Inc.}
+}
+```
+
+ * [Sarver's GitHub repo with the study's code](https://github.com/bricesarver/prior_simulation_study)
+
+

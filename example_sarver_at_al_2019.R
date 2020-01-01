@@ -13,7 +13,8 @@ suppressMessages(library(ggplot2))
 library(beautier)
 
 root_folder <- getwd()
-example_no <- 9
+
+example_no <- "sarver_et_al_2019" # Not exactly a number
 example_folder <- file.path(root_folder, paste0("example_", example_no, "_", rng_seed))
 dir.create(example_folder, showWarnings = FALSE, recursive = TRUE)
 setwd(example_folder)

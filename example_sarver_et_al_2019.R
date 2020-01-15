@@ -1,20 +1,10 @@
-# Code of example 9
-#
-# Works under Windows
-#
-#
-#
-
-# Set the RNG seed
-rng_seed <- 314
-
 library(pirouette)
 suppressMessages(library(ggplot2))
 library(beautier)
 
 root_folder <- getwd()
-
 example_no <- "sarver_et_al_2019" # Not exactly a number
+rng_seed <- 314
 example_folder <- file.path(root_folder, paste0("example_", example_no, "_", rng_seed))
 dir.create(example_folder, showWarnings = FALSE, recursive = TRUE)
 setwd(example_folder)

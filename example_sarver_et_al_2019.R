@@ -1,5 +1,4 @@
 library(pirouette)
-suppressMessages(library(ggplot2))
 library(beautier)
 
 ################################################################################
@@ -46,13 +45,9 @@ pir_out <- pir_run(
   pir_params = pir_params
 )
 
-pir_save(
-  phylogeny = phylogeny,
-  pir_params = pir_params,
-  pir_out = pir_out,
-  folder_name = folder_name
-)
-
+################################################################################
+# Save results
+################################################################################
 pir_save(
   phylogeny = phylogeny,
   pir_params = pir_params,

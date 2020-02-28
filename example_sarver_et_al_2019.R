@@ -6,16 +6,14 @@ library(beautier)
 # Constants
 ################################################################################
 is_testing <- is_on_travis()
-
-root_folder <- getwd()
 example_no <- "sarver_et_al_2019" # Not exactly a number
 rng_seed <- 314
-folder_name <- file.path(root_folder, paste0("example_", example_no, "_", rng_seed))
-dir.create(folder_name, showWarnings = FALSE, recursive = TRUE)
-setwd(folder_name)
-set.seed(rng_seed)
-testit::assert(is_beast2_installed())
+folder_name <- paste0("example_", example_no, "_", rng_seed)
 
+################################################################################
+# Create phylogeny
+################################################################################
+set.seed(rng_seed)
 # Same as https://github.com/bricesarver/prior_simulation_study/blob/master/simulate_trees.R#L26
 phylogeny  <- TreeSim::sim.bd.taxa.age(
   n = 25,
@@ -29,6 +27,9 @@ phylogeny  <- TreeSim::sim.bd.taxa.age(
 
 ape::write.tree(phylogeny, file = "tree_true.fas")
 
+################################################################################
+# Setup pirouette
+################################################################################
 pir_params <- create_std_pir_params(
   folder_name = folder_name
 )

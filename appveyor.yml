@@ -32,7 +32,6 @@ build_script:
   - travis-tool.sh install_r babette
   - travis-tool.sh install_github richelbilderbeek/mcbette
   - travis-tool.sh install_github thijsjanzen/nLTT
-  - travis-tool.sh install_github richelbilderbeek/becosys
   - travis-tool.sh install_github thijsjanzen/nodeSub
   - travis-tool.sh install_github richelbilderbeek/pirouette
   - travis-tool.sh install_deps
